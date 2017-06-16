@@ -28,18 +28,19 @@ Github repository: https://github.com/abdalmoniem/GfxTablet
 
 ### Part 1: uinput driver
 1. Clone the repository:
-   `git clone git://github.com/abdalmoniem/GfxTablet.git`
+	`git clone git://github.com/abdalmoniem/GfxTablet.git`
 2. Install `gcc`, `make` and linux kernel headers
-3. `cd GfxTablet/driver-uinput; make`
+3. In a terminal:
+	`cd GfxTablet/driver-uinput; make`
 
 Then, run the binary. The driver runs in user-mode, so it doesn't need any special privileges.
 However, it needs access to `/dev/uinput`. If your distribution doesn't create a group for
 uinput access, you'll need to do it yourself or just run the driver as root:
 
-`sudo ./networktablet`
+`sudo ./network_tablet`
 
 Then you should see a status message saying the driver is ready. If you do `xinput list` in a separate
-terminal, should show a "Network Tablet" device.
+terminal, it should show a "Network Drawing Tablet" device.
 
 You can start and stop (Ctrl+C) the Network Tablet at any time, but please be aware that applications
 which use the device may be confused by that and could crash.
