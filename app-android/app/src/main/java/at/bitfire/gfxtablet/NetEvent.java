@@ -40,8 +40,9 @@ public class NetEvent {
 	}
 		
 	public byte[] toByteArray() {
-		if (type == Type.TYPE_DISCONNECT)
+		if (type == Type.TYPE_DISCONNECT) {
 			return null;
+		}
 		
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		DataOutputStream dos = new DataOutputStream(baos);

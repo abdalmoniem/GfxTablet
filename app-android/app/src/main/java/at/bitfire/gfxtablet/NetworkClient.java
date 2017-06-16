@@ -45,11 +45,13 @@ public class NetworkClient implements Runnable {
 				NetEvent event = motionQueue.take();
 				
 				// graceful shutdown
-				if (event.type == Type.TYPE_DISCONNECT)
+				if (event.type == Type.TYPE_DISCONNECT) {
 					break;
+				}
 				
-				if (destAddress == null)		// no valid destination host
+				if (destAddress == null) {        // no valid destination host
 					continue;
+				}
 			
 				byte[] data = event.toByteArray();
 				DatagramPacket pkt = new DatagramPacket(data, data.length, destAddress, GFXTABLET_PORT);
