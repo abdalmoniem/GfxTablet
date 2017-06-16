@@ -77,4 +77,4 @@ once it's running:
 
 1. Use `xrandr` to identify which monitor you would like to have the stylus picked up on. In this example, `DVI-I-1`
    is the display to assign.
-2. Do `xinput map-to-output "$( xinput list --id-only "Network Tablet" )" DVI-I-1`.
+2. Do `xinput map-to-output "$(xinput list --id-only "Network Drawing Tablet")" DVI-I-1`.
