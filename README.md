@@ -28,7 +28,7 @@ Github repository: https://github.com/abdalmoniem/GfxTablet
 
 ### Part 1: uinput driver
 1. Clone the repository:
-   `git clone git://github.com/rfc2822/GfxTablet.git`
+   `git clone git://github.com/abdalmoniem/GfxTablet.git`
 2. Install gcc, make and linux kernel header includes (`kernel-headers` on Fedora)
 3. `cd GfxTablet/driver-uinput; make`
 
